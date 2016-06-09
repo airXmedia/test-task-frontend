@@ -1,0 +1,82 @@
+header {
+  margin-top: 73px;
+  padding-left: 49px;
+  padding-right: 49px;
+
+  .container-fluid {
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 56px;
+  }
+
+  h1 {
+    margin: 20px 0 0;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 1em;
+    color: #4c4c4c;
+  }
+
+  .btn {
+    padding: 0 45px;
+    border: 0 none;
+    @include border-radius(35px);
+    font-size: 13px;
+    line-height: 35px;
+    color: #b3b3b3;
+  }
+
+  .actions {
+
+    .btn {
+      position: relative;
+      margin: 0 20px;
+      padding: 0;
+      background: none;
+      font-size: 16px;
+      line-height: 25px;
+      color: #e1e1e1;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: -21px;
+        width: 1px;
+        height: 100%;
+        background: #e1e1e1;
+        content: '';
+      }
+
+      &:first-child {
+
+        &:before {
+          display: none;
+        }
+      }
+
+      &.btn-submit {
+        color: #26abec;
+      }
+    }
+  }
+  
+  // top bar header for edit form
+  &.top-bar {
+    height: 59px;
+    margin-top: 0;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 17px 0;
+
+    .container-fluid {
+      border-bottom: 0 none;
+      padding-bottom: 0;
+    }
+
+    h1 {
+      margin: 0;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 25px;
+      color: #4c4c4c;
+    }
+  }
+}

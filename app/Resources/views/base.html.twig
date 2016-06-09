@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Test App{% endblock %}</title>
+        {% block stylesheets %}
+            <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        <div class="page">
+            <header>
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- <div class="pull-right">
+                            <a class="btn btn-default" href="#" role="button">Edit</a>
+                        </div> -->
+                        
+                        <div class="pull-right actions">
+                            <a class="btn btn-cancel" href="#" role="button">Cancel</a>
+                            <button class="btn btn-submit">Save</button>
+                        </div>
+
+                        <!-- <h1 class="pull-left">Application form</h1> -->
+                        <h1 class="text-center">Edit</h1>
+                    </div>
+                </div>
+            </header>
+            {% block formContent %}
+                <!-- <section class="content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-3 col-md-offset-0">
+                                <div class="box">
+                                    <ul>
+                                        <li>
+                                            <h3>John Doe</h3>
+                                        </li>
+                                        <li>15 April 1983</li>
+                                        <li><a href="mailto:johndoe@gmail.com">johndoe@gmail.com</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="box">
+                                    <div class="row">
+                                        <div class="col-sm-3 text-right">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">www.mywebsite.com</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">+65 336889425</a>
+                                                </li>
+                                                <li>Skill 123</li>
+                                                <li>Male</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-7">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt sit dolorum, optio earum molestiae nulla laboriosam mollitia animi maxime, ipsa delectus doloremque rerum non adipisci vel perferendis beatae, ut officiis!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section> -->
+
+                <section class="form">
+                    <form action="/">
+                        <h2>Application form</h2>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="userName" value="">
+                                    <label for="userName">
+                                        <span>User Name</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <input type="date" class="form-control" id="birthdate">
+                                    <label for="birthdate">
+                                        <span>Birthdate</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email">
+                                    <label for="email">
+                                        <span>Email</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="url">
+                                    <label for="url">
+                                        <span>URL</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="phoneNumber">
+                                    <label for="phoneNumber">
+                                        <span>Phone Number</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="skillNumber">
+                                            <label for="skillNumber">
+                                                <span>Skill number</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="sex" id="male" value="male" checked>
+                                                <span>Male</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="sex" id="female" value="female">
+                                                <span>Female</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="password">
+                                    <label for="password">
+                                        <span>Password</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="repeatPassword">
+                                    <label for="repeatPassword">
+                                        <span>Repeat Password</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-10">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="text">
+                                    <label for="text">
+                                        <span>Enter a brief description of yourself and interest.</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            {% endblock %}
+        </div>
+        {% block javascripts %}
+            <!-- // <script src="{{ asset('assets/js/vendor/json2.js') }}"></script> -->
+            <script src="{{ asset('../vendor/components/underscore/underscore-min.js') }}"></script>
+            <script src="{{ asset('../vendor/components/backbone/backbone-min.js') }}"></script>
+            <script src="{{ asset('assets/js/vendors/jquery-1.12.4.min.js') }}"></script>
+            <!-- // <script src="{{ asset('assets/js/vendor/backbone.marionette.js') }}"></script> -->
+            <!-- // <script src="{{ asset('assets/js/vendor/spin.js') }}"></script> -->
+            <script src="{{ asset('assets/js/app.js') }}"></script>
+            <!-- <script src="{{ asset('assets/js/common/views.js') }}"></script>
+            // <script src="{{ asset('assets/js/apps/gallery/gallery_app.js') }}"></script>
+            // <script src="{{ asset('assets/js/apps/gallery/list/list_controller.js') }}"></script>
+            // <script src="{{ asset('assets/js/apps/gallery/list/list_view.js') }}"></script>
+            // <script src="{{ asset('assets/js/apps/gallery/show/show_controller.js') }}"></script>
+            // <script src="{{ asset('assets/js/apps/gallery/show/show_view.js') }}"></script> -->
+            <!-- // <script src="{{ asset('assets/js/vendor/bootstrap.min.js') }}"></script> -->
+            <!-- // <script src="{{ asset('assets/js/vendor/swipebox.min.js') }}"></script> -->
+        {% endblock %}
+    </body>
+</html>

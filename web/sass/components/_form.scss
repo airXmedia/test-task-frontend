@@ -1,0 +1,129 @@
+.form-group {
+  position: relative;
+  margin-bottom: 23px;
+
+  & > label {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 38px;
+    margin: 0;
+    font-weight: 400;
+    cursor: text;
+
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 16px;
+      line-height: 38px;
+      color: #e1e1e1;
+      @include transition(all $td $ttf);
+    }
+
+    &:after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background: #26abec;
+      content: '';
+      @include transition(all $td $ttf);
+    }
+  }
+
+  .form-control {
+    height: 38px;
+    border: 0 none;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 0;
+    background: none;
+    font-size: 16px;
+    line-height: 38px;
+    color: #4c4c4c;
+    @include box-shadow(none);
+
+    &:focus {
+
+      & + label {
+
+        span {
+          position: absolute;
+          top: -10px;
+          left: 0;
+          font-size: 12px;
+          line-height: 1em;
+          color: #26abec;
+        }
+
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.radio {
+  @include pie-clearfix;
+
+  span {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 22px;
+      height: 22px;
+      border: 1px solid #e1e1e1;
+      @include border-radius(22px);
+      content: '';
+      @include transition(all $td $ttf);
+    }
+
+    &:after {
+      position: absolute;
+      top: 5px;
+      left: 9px;
+      width: 5px;
+      height: 10px;
+      border-right: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+      content: '';
+      @include transform(rotate(40deg));
+      @include transition(all $td $ttf);
+    }
+  }
+
+  input {
+    display: none;
+
+    &:checked {
+
+      & + span {
+        color: #4c4c4c;
+
+        &:before {
+          border-color: #0284d2;
+          background: #0284d2;
+        }
+
+        &:after {
+          display: block;
+        }
+      }
+    }
+  }
+
+  label {
+    margin: 0;
+    font-weight: 400;
+    color: #e1e1e1;
+  }
+}

@@ -1,0 +1,30 @@
+// bootsrap variables
+$grid-columns:              10 !default;
+$grid-gutter-width:         40px;
+// $grid-float-breakpoint:     768px;
+
+// Colors
+$body-color: #848485;
+$error-color: #e14545;
+$completed-color: green;
+$optional-color: yellow;
+
+// Backgrounds
+$body-background: #fafafb;
+
+// Links color
+$a-link-color: $body-color;
+$a-hover-color: #333;
+
+$header-height: 56px;
+$footer-height: 106px;
+
+// theme-colors
+$color-first: #001e38;
+$color-second: #21afe5;
+$color-third: #ccc;
+$color-fourth: #797979;
+
+// animation
+$td: 0.2s;
+$ttf: ease-in-out;
