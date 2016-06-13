@@ -13,17 +13,21 @@
             <header>
                 <div class="container-fluid">
                     <div class="row">
-                        <!-- <div class="pull-right">
-                            <a class="btn btn-default" href="#" role="button">Edit</a>
-                        </div> -->
-                        
-                        <div class="pull-right actions">
-                            <a class="btn btn-cancel" href="#" role="button">Cancel</a>
-                            <button class="btn btn-submit">Save</button>
+                        <div class="page">
+                            <div class="pull-right">
+                                <a class="btn btn-default" href="#" role="button">Edit</a>
+                            </div>
+                            <h1 class="pull-left">Application form</h1>
                         </div>
-
-                        <!-- <h1 class="pull-left">Application form</h1> -->
-                        <h1 class="text-center">Edit</h1>
+                        
+                        <div class="form">
+                            <div class="pull-right actions">
+                                <a class="btn btn-cancel" href="#" role="button">Cancel</a>
+                                <button class="btn btn-submit">Save</button>
+                            </div>
+                            
+                            <h1 class="text-center">Edit</h1>
+                        </div>
                     </div>
                 </div>
             </header>
@@ -181,21 +185,21 @@
             {% endblock %}
         </div>
         {% block javascripts %}
-            <!-- // <script src="{{ asset('assets/js/vendor/json2.js') }}"></script> -->
             <script src="{{ asset('../vendor/components/underscore/underscore-min.js') }}"></script>
             <script src="{{ asset('../vendor/components/backbone/backbone-min.js') }}"></script>
             <script src="{{ asset('assets/js/vendors/jquery-1.12.4.min.js') }}"></script>
-            <!-- // <script src="{{ asset('assets/js/vendor/backbone.marionette.js') }}"></script> -->
-            <!-- // <script src="{{ asset('assets/js/vendor/spin.js') }}"></script> -->
-            <script src="{{ asset('assets/js/app.js') }}"></script>
-            <!-- <script src="{{ asset('assets/js/common/views.js') }}"></script>
-            // <script src="{{ asset('assets/js/apps/gallery/gallery_app.js') }}"></script>
-            // <script src="{{ asset('assets/js/apps/gallery/list/list_controller.js') }}"></script>
-            // <script src="{{ asset('assets/js/apps/gallery/list/list_view.js') }}"></script>
-            // <script src="{{ asset('assets/js/apps/gallery/show/show_controller.js') }}"></script>
-            // <script src="{{ asset('assets/js/apps/gallery/show/show_view.js') }}"></script> -->
-            <!-- // <script src="{{ asset('assets/js/vendor/bootstrap.min.js') }}"></script> -->
-            <!-- // <script src="{{ asset('assets/js/vendor/swipebox.min.js') }}"></script> -->
+            <script src="{{ asset('../vendor/twbs/bootstrap-sass/assets/javascripts/bootstrap.min.js') }}"></script>
+
+            <script src="{{ asset('assets/js/utils.js') }}"></script>
+
+            <script src="{{ asset('assets/js/models/model.js') }}"></script>
+
+            <script src="{{ asset('assets/js/views/header.js') }}"></script>
+            <script src="{{ asset('assets/js/views/details.js') }}"></script>
+            <script src="{{ asset('assets/js/views/edit.js') }}"></script>
+
+            <script src="{{ asset('assets/js/main.js') }}"></script>
+            
         {% endblock %}
     </body>
 </html>

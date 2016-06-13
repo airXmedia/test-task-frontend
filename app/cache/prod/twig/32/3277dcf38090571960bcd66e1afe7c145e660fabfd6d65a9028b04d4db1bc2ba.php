@@ -38,32 +38,36 @@ class __TwigTemplate_89e6562c95b931df8c93d88da5ff569f3a61bee252021d0adb1e9f0fd59
     </head>
     <body>
         <div class=\"page\">
-            <header class=\"top-bar\">
+            <header>
                 <div class=\"container-fluid\">
                     <div class=\"row\">
-                        <!-- <div class=\"pull-right\">
-                            <a class=\"btn btn-default\" href=\"#\" role=\"button\">Edit</a>
-                        </div> -->
-                        
-                        <div class=\"pull-right actions\">
-                            <a class=\"btn btn-cancel\" href=\"#\" role=\"button\">Cancel</a>
-                            <button class=\"btn btn-submit\">Save</button>
+                        <div class=\"page\">
+                            <div class=\"pull-right\">
+                                <a class=\"btn btn-default\" href=\"#\" role=\"button\">Edit</a>
+                            </div>
+                            <h1 class=\"pull-left\">Application form</h1>
                         </div>
-
-                        <!-- <h1 class=\"pull-left\">Application form</h1> -->
-                        <h1 class=\"text-center\">Edit</h1>
+                        
+                        <div class=\"form\">
+                            <div class=\"pull-right actions\">
+                                <a class=\"btn btn-cancel\" href=\"#\" role=\"button\">Cancel</a>
+                                <button class=\"btn btn-submit\">Save</button>
+                            </div>
+                            
+                            <h1 class=\"text-center\">Edit</h1>
+                        </div>
                     </div>
                 </div>
             </header>
             ";
-        // line 30
+        // line 34
         $this->displayBlock('formContent', $context, $blocks);
-        // line 182
+        // line 186
         echo "        </div>
         ";
-        // line 183
+        // line 187
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 201
+        // line 204
         echo "    </body>
 </html>
 ";
@@ -85,10 +89,10 @@ class __TwigTemplate_89e6562c95b931df8c93d88da5ff569f3a61bee252021d0adb1e9f0fd59
         ";
     }
 
-    // line 30
+    // line 34
     public function block_formContent($context, array $blocks = array())
     {
-        // line 31
+        // line 35
         echo "                <!-- <section class=\"content\">
                     <div class=\"container-fluid\">
                         <div class=\"row\">
@@ -242,73 +246,54 @@ class __TwigTemplate_89e6562c95b931df8c93d88da5ff569f3a61bee252021d0adb1e9f0fd59
             ";
     }
 
-    // line 183
+    // line 187
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 184
-        echo "            <!-- // <script src=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/js/vendor/json2.js"), "html", null, true);
-        echo "\"></script> -->
-            <script src=\"";
-        // line 185
+        // line 188
+        echo "            <script src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("../vendor/components/underscore/underscore-min.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 186
+        // line 189
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("../vendor/components/backbone/backbone-min.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 187
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/js/vendors/backbone-validation-min.js"), "html", null, true);
-        echo "\"></script>
-            <script src=\"";
-        // line 188
+        // line 190
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/js/vendors/jquery-1.12.4.min.js"), "html", null, true);
         echo "\"></script>
-            <!-- // <script src=\"";
-        // line 189
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/js/vendor/backbone.marionette.js"), "html", null, true);
-        echo "\"></script> -->
-            <!-- // <script src=\"";
-        // line 190
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/js/vendor/spin.js"), "html", null, true);
-        echo "\"></script> -->
             <script src=\"";
         // line 191
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/js/app.js"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("../vendor/twbs/bootstrap-sass/assets/javascripts/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
-            <!-- <script src=\"";
-        // line 192
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/js/common/views.js"), "html", null, true);
-        echo "\"></script>
-            // <script src=\"";
+
+            <script src=\"";
         // line 193
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/js/apps/gallery/gallery_app.js"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/js/utils.js"), "html", null, true);
         echo "\"></script>
-            // <script src=\"";
-        // line 194
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/js/apps/gallery/list/list_controller.js"), "html", null, true);
-        echo "\"></script>
-            // <script src=\"";
+
+            <script src=\"";
         // line 195
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/js/apps/gallery/list/list_view.js"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/js/models/model.js"), "html", null, true);
         echo "\"></script>
-            // <script src=\"";
-        // line 196
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/js/apps/gallery/show/show_controller.js"), "html", null, true);
-        echo "\"></script>
-            // <script src=\"";
+
+            <script src=\"";
         // line 197
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/js/apps/gallery/show/show_view.js"), "html", null, true);
-        echo "\"></script> -->
-            <!-- // <script src=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/js/views/header.js"), "html", null, true);
+        echo "\"></script>
+            <script src=\"";
         // line 198
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/js/vendor/bootstrap.min.js"), "html", null, true);
-        echo "\"></script> -->
-            <!-- // <script src=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/js/views/details.js"), "html", null, true);
+        echo "\"></script>
+            <script src=\"";
         // line 199
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/js/vendor/swipebox.min.js"), "html", null, true);
-        echo "\"></script> -->
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/js/views/edit.js"), "html", null, true);
+        echo "\"></script>
+
+            <script src=\"";
+        // line 201
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/js/main.js"), "html", null, true);
+        echo "\"></script>
+            
         ";
     }
 
@@ -324,7 +309,7 @@ class __TwigTemplate_89e6562c95b931df8c93d88da5ff569f3a61bee252021d0adb1e9f0fd59
 
     public function getDebugInfo()
     {
-        return array (  310 => 199,  306 => 198,  302 => 197,  298 => 196,  294 => 195,  290 => 194,  286 => 193,  282 => 192,  278 => 191,  274 => 190,  270 => 189,  266 => 188,  262 => 187,  258 => 186,  254 => 185,  249 => 184,  246 => 183,  92 => 31,  89 => 30,  82 => 7,  79 => 6,  73 => 5,  67 => 201,  65 => 183,  62 => 182,  60 => 30,  35 => 9,  33 => 6,  29 => 5,  23 => 1,);
+        return array (  294 => 201,  289 => 199,  285 => 198,  281 => 197,  276 => 195,  271 => 193,  266 => 191,  262 => 190,  258 => 189,  253 => 188,  250 => 187,  96 => 35,  93 => 34,  86 => 7,  83 => 6,  77 => 5,  71 => 204,  69 => 187,  66 => 186,  64 => 34,  35 => 9,  33 => 6,  29 => 5,  23 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -339,20 +324,24 @@ class __TwigTemplate_89e6562c95b931df8c93d88da5ff569f3a61bee252021d0adb1e9f0fd59
 /*     </head>*/
 /*     <body>*/
 /*         <div class="page">*/
-/*             <header class="top-bar">*/
+/*             <header>*/
 /*                 <div class="container-fluid">*/
 /*                     <div class="row">*/
-/*                         <!-- <div class="pull-right">*/
-/*                             <a class="btn btn-default" href="#" role="button">Edit</a>*/
-/*                         </div> -->*/
-/*                         */
-/*                         <div class="pull-right actions">*/
-/*                             <a class="btn btn-cancel" href="#" role="button">Cancel</a>*/
-/*                             <button class="btn btn-submit">Save</button>*/
+/*                         <div class="page">*/
+/*                             <div class="pull-right">*/
+/*                                 <a class="btn btn-default" href="#" role="button">Edit</a>*/
+/*                             </div>*/
+/*                             <h1 class="pull-left">Application form</h1>*/
 /*                         </div>*/
-/* */
-/*                         <!-- <h1 class="pull-left">Application form</h1> -->*/
-/*                         <h1 class="text-center">Edit</h1>*/
+/*                         */
+/*                         <div class="form">*/
+/*                             <div class="pull-right actions">*/
+/*                                 <a class="btn btn-cancel" href="#" role="button">Cancel</a>*/
+/*                                 <button class="btn btn-submit">Save</button>*/
+/*                             </div>*/
+/*                             */
+/*                             <h1 class="text-center">Edit</h1>*/
+/*                         </div>*/
 /*                     </div>*/
 /*                 </div>*/
 /*             </header>*/
@@ -510,22 +499,21 @@ class __TwigTemplate_89e6562c95b931df8c93d88da5ff569f3a61bee252021d0adb1e9f0fd59
 /*             {% endblock %}*/
 /*         </div>*/
 /*         {% block javascripts %}*/
-/*             <!-- // <script src="{{ asset('assets/js/vendor/json2.js') }}"></script> -->*/
 /*             <script src="{{ asset('../vendor/components/underscore/underscore-min.js') }}"></script>*/
 /*             <script src="{{ asset('../vendor/components/backbone/backbone-min.js') }}"></script>*/
-/*             <script src="{{ asset('assets/js/vendors/backbone-validation-min.js') }}"></script>*/
 /*             <script src="{{ asset('assets/js/vendors/jquery-1.12.4.min.js') }}"></script>*/
-/*             <!-- // <script src="{{ asset('assets/js/vendor/backbone.marionette.js') }}"></script> -->*/
-/*             <!-- // <script src="{{ asset('assets/js/vendor/spin.js') }}"></script> -->*/
-/*             <script src="{{ asset('assets/js/app.js') }}"></script>*/
-/*             <!-- <script src="{{ asset('assets/js/common/views.js') }}"></script>*/
-/*             // <script src="{{ asset('assets/js/apps/gallery/gallery_app.js') }}"></script>*/
-/*             // <script src="{{ asset('assets/js/apps/gallery/list/list_controller.js') }}"></script>*/
-/*             // <script src="{{ asset('assets/js/apps/gallery/list/list_view.js') }}"></script>*/
-/*             // <script src="{{ asset('assets/js/apps/gallery/show/show_controller.js') }}"></script>*/
-/*             // <script src="{{ asset('assets/js/apps/gallery/show/show_view.js') }}"></script> -->*/
-/*             <!-- // <script src="{{ asset('assets/js/vendor/bootstrap.min.js') }}"></script> -->*/
-/*             <!-- // <script src="{{ asset('assets/js/vendor/swipebox.min.js') }}"></script> -->*/
+/*             <script src="{{ asset('../vendor/twbs/bootstrap-sass/assets/javascripts/bootstrap.min.js') }}"></script>*/
+/* */
+/*             <script src="{{ asset('assets/js/utils.js') }}"></script>*/
+/* */
+/*             <script src="{{ asset('assets/js/models/model.js') }}"></script>*/
+/* */
+/*             <script src="{{ asset('assets/js/views/header.js') }}"></script>*/
+/*             <script src="{{ asset('assets/js/views/details.js') }}"></script>*/
+/*             <script src="{{ asset('assets/js/views/edit.js') }}"></script>*/
+/* */
+/*             <script src="{{ asset('assets/js/main.js') }}"></script>*/
+/*             */
 /*         {% endblock %}*/
 /*     </body>*/
 /* </html>*/
